@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;0,700;0,800;1,500&family=Mukta:wght@200;300;400;500;600;800&family=Open+Sans:ital,wght@1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   text-align: center;
+}
+
+.wrapper {
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: #ecf0f1;
+}
+
+.container {
+    display: flex;
+    height: 50vh;
+}
+
+.content-blue {
+    background: linear-gradient(to top, hsl(241, 81%, 54%),  hsl(252, 100%, 67%));
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.content-blue h4 {
+    padding: 20px 0;
+    color: hsl(0, 0%, 100%);
+}
+
+.rounded {
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1),  hsla(241, 72%, 46%, 0));
+    display: inline-block;
+    padding: 25px 35px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.rounded h2 {
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    font-size: 2rem;
+}
+
+.rounded small {
+    color: hsl(241, 100%, 89%);
+}
+
+.content-blue h3 {
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    padding: 10px 0;
+}
+
+.content-blue p {
+    font-weight: 500;
+    font-size: 15px;
+    color:  hsl(241, 100%, 89%);
+}
+
+.content {
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background:  hsl(0, 0%, 100%);
+}
+
+.content h4 {
+    color: hsl(224, 30%, 27%);
+    padding: 20px 0;
+}
+
+.result .reaction {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.result p {
+    font-size: 15px;
+    color:  hsl(224, 30%, 27%);
+    font-weight: 500;
+}
+
+.result p span {
+    color:  hsl(241, 100%, 89%);
+}
+
+.btn {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    cursor: grab;
+    color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    animation-name: color-change;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    transition: all ease-in-out 300ms;
+}
+
+@keyframes color-change {
+    0% {
+        background: hsl(241, 81%, 54%);
+    }
+    50% {
+        background: linear-gradient(to top,  hsl(241, 81%, 54%),  hsl(252, 100%, 67%));
+    }
+    100% {
+        background: linear-gradient(to bottom,  hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    }
+}
+
+.danger {
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(255, 87, 87, 0.1);
+}
+
+.warning {
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(255, 176, 31, 0.1);
+}
+
+.success {
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    border-radius: 5px;
+    background:  rgb(0, 189, 145, 0.1);
+}
+
+.primary {
+    background: rgb(17, 37, 212, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .container::-webkit-scrollbar {
+        visibility: hidden;
+    }
+}
+
